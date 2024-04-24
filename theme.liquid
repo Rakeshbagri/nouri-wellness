@@ -1,10 +1,28 @@
-<!doctype html>
+ <!doctype html>
 <html class="no-js" lang="{{ request.locale.iso_code }}">
 <head>
+ {%- render 'layouthub_header' -%}
+<link rel='preconnect dns-prefetch' href='https://api.config-security.com/' crossorigin />
+<link rel='preconnect dns-prefetch' href='https://conf.config-security.com/' crossorigin />
+<link rel='preconnect dns-prefetch' href='https://whale.camera/' crossorigin />
+<script>
+    window.rechargeCustomTheme = {
+      selectors: {
+        price: ['.product-price'],
+        variant: ['.option-selector'],
+        variant_selector: ['.opt-btn']
+      }
+    }
+</script> 
+  
+<script>
+/* >> TriplePixel :: start*/
+window.TriplePixelData={TripleName:"nouri-wellness.myshopify.com",ver:"2.12",plat:"SHOPIFY",isHeadless:false},function(W,H,A,L,E,_,B,N){function O(U,T,P,H,R){void 0===R&&(R=!1),H=new XMLHttpRequest,P?(H.open("POST",U,!0),H.setRequestHeader("Content-Type","text/plain")):H.open("GET",U,!0),H.send(JSON.stringify(P||{})),H.onreadystatechange=function(){4===H.readyState&&200===H.status?(R=H.responseText,U.includes(".txt")?eval(R):P||(N[B]=R)):(299<H.status||H.status<200)&&T&&!R&&(R=!0,O(U,T-1,P))}}if(N=window,!N[H+"sn"]){N[H+"sn"]=1,L=function(){return Date.now().toString(36)+"_"+Math.random().toString(36)};try{A.setItem(H,1+(0|A.getItem(H)||0)),(E=JSON.parse(A.getItem(H+"U")||"[]")).push({u:location.href,r:document.referrer,t:Date.now(),id:L()}),A.setItem(H+"U",JSON.stringify(E))}catch(e){}var i,m,p;A.getItem('"!nC`')||(_=A,A=N,A[H]||(E=A[H]=function(t,e,a){return void 0===a&&(a=[]),"State"==t?E.s:(W=L(),(E._q=E._q||[]).push([W,t,e].concat(a)),W)},E.s="Installed",E._q=[],E.ch=W,B="configSecurityConfModel",N[B]=1,O("https://conf.config-security.com/model",5),i=L(),m=A[atob("c2NyZWVu")],_.setItem("di_pmt_wt",i),p={id:i,action:"profile",avatar:_.getItem("auth-security_rand_salt_"),time:m[atob("d2lkdGg=")]+":"+m[atob("aGVpZ2h0")],host:A.TriplePixelData.TripleName,plat:A.TriplePixelData.plat,url:window.location.href,ref:document.referrer,ver:A.TriplePixelData.ver},O("https://api.config-security.com/event",5,p),O("https://whale.camera/live/dot.txt",5)))}}("","TriplePixel",localStorage);
+/* << TriplePixel :: end*/
+</script>
 {% include 'booster-seo' %}
   <meta name="google-site-verification" content="Uws7wopOnpLd18Uij3zFm4e5TrQZ5sZFh9EmjLMYZVs" />
- {% render 'pagefly-head' %}
- {%- render 'layouthub_header' -%}
+ 
 <meta name="google-site-verification" content="BMb3TGFWbt7mQXhaNGs7zpxpR1XDjlmZ6I0etVcdyrw" />
   <!-- Alchemy 4.0.0 -->
   <link rel="preload" href="{{ 'styles.css' | asset_url }}" as="style">
@@ -20,11 +38,36 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">
   <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+
+  {% if page.template_suffix == "mnp-lander" or page.template_suffix == "meno-slim-bundle" %}
+ 	{% render "theme-css" %}
+  {% endif %}
+
+  
   {% render 'social-meta-tags' %}
   {{ 'styles.css' | asset_url | stylesheet_tag }}
   {{ 'custom.css' | asset_url | stylesheet_tag }}
-  {{ content_for_header }}
+  {{ 'bodyshop.css' | asset_url | stylesheet_tag }}
 
+{% if template == "index" %}
+{{ 'home.css' | asset_url | stylesheet_tag }}
+{% endif %}
+
+    {% if page.template_suffix == "mnp-lander" or page.template_suffix == "meno-slim-bundle" or page.template_suffix == "stress-support" %}
+ 
+ {{ 'bodyshop-1.css' | asset_url | stylesheet_tag }}
+ 
+
+    {% endif %}
+{{ content_for_header }}
+  
+  
+   {{ 'bodyshop-secs.css' | asset_url | stylesheet_tag }}
+   {{ 'footer.css' | asset_url | stylesheet_tag }}
+
+
+
+  
   <script>
     document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
     window.theme = window.theme || {};
@@ -109,7 +152,9 @@
 	t,r,i;try{t=top.document.referer!==""?encodeURIComponent(top.document.referrer.substring(0,2048)):""}catch(o){t=document.referrer!==null?document.referrer.toString().substring(0,2048):""}try{r=window&&window.top&&document.location&&window.top.location===document.location?document.location:window&&window.top&&window.top.location&&""!==window.top.location?window.top.location:document.location}catch(u){r=document.location}try{i=parent.location.href!==""?encodeURIComponent(parent.location.href.toString().substring(0,2048)):""}catch(a){try{i=r!==null?encodeURIComponent(r.toString().substring(0,2048)):""}catch(f){i=""}}var l,c=document.createElement("script"),h=null,p=document.getElementsByTagName("script"),d=Number(p.length)-1,v=document.getElementsByTagName("script")[d];if(typeof l==="undefined"){l=Math.floor(Math.random()*1e17)}h="dx.mountain.com/spx?"+"dxver="+b+"&shaid="+n+"&tdr="+t+"&plh="+i+"&cb="+l+additional;c.type="text/javascript";c.src=("https:"===document.location.protocol?"https://":"http://")+h;v.parentNode.insertBefore(c,v)})()
 </script>
   
-</head>
+
+
+{% include 'pagefly-app-header' %}</head>
 
 {%- liquid
   assign body_classes = ''
@@ -130,8 +175,12 @@
   {%- endif -%}
 
   <a class="skip-link visually-hidden" href="#main">{{ 'general.accessibility_labels.skip_to_content' | t }}</a>
+  
+
+
   {% section 'announcement' %}
   {% section 'header' %}
+
 
   <main id="main">
     {%- if template.name == 'article' -%}
@@ -152,6 +201,11 @@
   {% section 'popup' %}
   {% section 'footer' %}
 
+ 
+
+<!-- new header removed javascript-->
+
+
   <div class="hidden" aria-hidden="true">
     {%- form 'customer', id: 'signup-form-response' -%}
       {%- if form.posted_successfully? -%}
@@ -168,8 +222,7 @@
     {%- endform -%}
   </div>
 
-  <script src="{{ 'vendor.js' | asset_url }}"></script>
-  <script src="{{ 'theme.js' | asset_url }}"></script>
+
  {% include 'smile-initializer' %}
 
   <!--Start Stamped.io Bazaarvoice Integration-->
@@ -222,8 +275,22 @@ y.push([m+"dyn_wdp.js"+q+h,p])):f(b.fp_dyn)&&d("loader: Invalid Config, first pa
   $('body').on('click','.btn-buy2', function() {
     $('#shopify-section-template--15140152508483__dc608ae4-d3d7-4461-9a1f-6eb7fe21993f .qty-product3-wrapper .product-add button').trigger('click');
   });
+
+
+      $(document).on("click",".js-prod-qty",function(){
+	var $qtyInput=$(this).closest(".qty-selector").find("input.quantity");
+	currValue=parseInt($qtyInput.val());
+	newValue=$(this).data("direction")==="+"?currValue+=1:currValue-=1;
+	$qtyInput.val(Math.max(1,newValue))});
+
+      
   </script>
 {% render 'rebuy-smartcart-extensions' %}
 {{ '//cdn.shopify.com/s/files/1/0194/1736/6592/t/1/assets/booster-page-speed-optimizer.js?23' | script_tag }}
 </body>
 </html>
+
+ 
+      
+  <script src="{{ 'vendor.js' | asset_url }}"></script>
+  <script src="{{ 'theme.js' | asset_url }}"></script>
